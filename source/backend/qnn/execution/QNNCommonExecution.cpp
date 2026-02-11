@@ -48,6 +48,11 @@ ErrorCode QNNCommonExecution::onExecute(const std::vector<Tensor *> &inputs, con
 void QNNCommonExecution::setNodeName(const Op * op, const std::vector<Tensor *> &inputs, const std::vector<Tensor *> &outputs) {
     if (nullptr != op->name()) {
         mNodeName = op->name()->str();
+        for (int i=0; i<mNodeName.size(); ++i) {
+            if (mNodeName[i] == '.' || mNodeName[i] == '/') {
+                mNodeName[i] = '_';
+            }
+        }
         return;
     }
     std::string nodeNameBase = MNN::EnumNameOpType(mOp->type());
