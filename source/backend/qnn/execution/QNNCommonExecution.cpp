@@ -46,6 +46,10 @@ ErrorCode QNNCommonExecution::onExecute(const std::vector<Tensor *> &inputs, con
 }
 
 void QNNCommonExecution::setNodeName(const Op * op, const std::vector<Tensor *> &inputs, const std::vector<Tensor *> &outputs) {
+    if (nullptr != op->name()) {
+        mNodeName = op->name()->str();
+        return;
+    }
     std::string nodeNameBase = MNN::EnumNameOpType(mOp->type());
     nodeNameBase += "_";
     std::string inputTag = "I_";

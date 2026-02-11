@@ -412,6 +412,7 @@ static SubModuleIO _getSubModuleIO(std::vector<MNN::Express::VARP> inputs, const
     }
     auto attentionNames = _getAttentionName(buffer, bufferSize);
     MNN::ScheduleConfig config;
+    config.numThread = 1;
     std::shared_ptr<MNN::Express::Executor::RuntimeManager> rtmgr(MNN::Express::Executor::RuntimeManager::createRuntimeManager(config));
     rtmgr->setExternalFile((srcpath + ".weight").c_str());
     rtmgr->setMode(MNN::Interpreter::Session_Debug);
