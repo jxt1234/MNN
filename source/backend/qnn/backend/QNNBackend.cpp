@@ -1767,6 +1767,9 @@ public:
                 if (inputs.size() > 1) {
                     return false;
                 }
+                if (TensorUtils::getDescribe(outputs[0])->quantAttr == nullptr) {
+                    return false;
+                }
                 if (op->main_as_Convolution2D() && op->main_as_Convolution2D()->weight() != nullptr) {
                     return false;
                 } else {
