@@ -366,10 +366,13 @@ static bool computeIndex(PluginContext* ctx, int & index) {
         return false;
     }
     int dimSum = 0;
+    // MNN_PRINT("All Inputs Begin\n");
     for (int i = 0; i < inputs.size(); i++) {
+        // inputs[i]->printShape();
         auto inputDim = inputs[i]->dimensions();
         dimSum += inputDim;
     }
+    // MNN_PRINT("All Inputs End\n");
     if (0 == dimSum) {
         // Scalar
         index = 0;
@@ -862,7 +865,7 @@ public:
                 }
             }
             if (!find) {
-                FUNC_PRINT(i);
+                MNN_ERROR("%s, can't find %d input: %s\n", mPath.c_str(), i, inputs[i].second.c_str());
             }
         }
         for (int i=0; i<outputs.size(); ++i) {
@@ -881,7 +884,7 @@ public:
                 }
             }
             if (!find) {
-                FUNC_PRINT(i);
+                MNN_ERROR("%s, can't find %d output: %s\n", mPath.c_str(), i, outputs[i].second.c_str());
             }
         }
         CALL_QNN(QNN::gContext.interface.graphExecute(qnnGraphHandle, graph->inputTensors, graph->numInputTensors, \
