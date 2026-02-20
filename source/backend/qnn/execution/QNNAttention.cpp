@@ -40,10 +40,10 @@ ErrorCode QNNAttention::onEncode(const std::vector<Tensor *> &inputs, const std:
     int seqLenKV = inputs[1]->length(1);
     float scale = 1.0 / sqrt(headDim);
     Qnn_DataType_t dataType = mBackend->getNativeTensor(inputs[0])->v1.dataType;
-    this->createStageTensor("Query_perm", dataType, std::vector<int>({batch, headNum, headDim, seqLenQ})); // mTempTensorWrappers[0], stage query
-    this->createStageTensor("Key_perm", dataType, std::vector<int>({batch, kvHeadNum, headDim, seqLenKV})); // mTempTensorWrappers[1], stage key
-    this->createStageTensor("Value_perm", dataType, std::vector<int>({batch, kvHeadNum, headDim, seqLenKV})); // mTempTensorWrappers[2], stage value
-    this->createStageTensor("ScaleQ", dataType, std::vector<int>({batch, headNum, headDim, seqLenQ})); // mTempTensorWrappers[3], stage Scale
+    this->createStageTensor("Query_perm", dataType, std::vector<int>({batch, headNum, seqLenQ, headDim})); // mTempTensorWrappers[0], stage query
+    this->createStageTensor("Key_perm", dataType, std::vector<int>({batch, kvHeadNum, seqLenKV, headDim})); // mTempTensorWrappers[1], stage key
+    this->createStageTensor("Value_perm", dataType, std::vector<int>({batch, kvHeadNum, seqLenKV, headDim})); // mTempTensorWrappers[2], stage value
+    this->createStageTensor("ScaleQ", dataType, std::vector<int>({batch, headNum, seqLenQ, headDim})); // mTempTensorWrappers[3], stage Scale
     this->createStageTensor("QK", dataType, std::vector<int>({batch, headNum, seqLenQ, seqLenKV})); // mTempTensorWrappers[4], stage QK
     this->createStageTensor("Softmax", dataType, std::vector<int>({batch, headNum, seqLenQ, seqLenKV})); // mTempTensorWrappers[5], stage Softmax
     this->createStageTensor("QKV", dataType, std::vector<int>({batch, headNum, seqLenQ, headDim})); // mTempTensorWrappers[6], stage QKV
@@ -52,9 +52,9 @@ ErrorCode QNNAttention::onEncode(const std::vector<Tensor *> &inputs, const std:
     size_t totalSize = batch * headNum * seqLenQ * headDim;
     std::vector<float> scaleVec(totalSize, scale);
     // mTempTensorWrappers[5], static coef
-    this->createStaticFloatTensor("coef", dataType, std::vector<uint32_t>({(uint32_t)batch, (uint32_t)headNum, (uint32_t)headDim, (uint32_t)seqLenQ}), scaleVec.data());
+    this->createStaticFloatTensor("coef", dataType, std::vector<uint32_t>({(uint32_t)1, (uint32_t)1, (uint32_t)1, (uint32_t)1}), scaleVec.data());
 
-    std::vector<uint32_t> mapReal{0, 2, 3, 1};
+    std::vector<uint32_t> mapReal{0, 2, 1, 3};
     std::vector<uint32_t> mapOutputReal{0, 2, 1, 3};
     this->createParamTensor("perm", QNN_DATATYPE_UINT_32, {(uint32_t) 4}, mapReal.data(), "input_query"); // mParamTensorWrappers[0]
     this->createParamTensor("perm", QNN_DATATYPE_UINT_32, {(uint32_t) 4}, mapReal.data(), "input_key"); // mParamTensorWrappers[1]
@@ -224,8 +224,8 @@ ErrorCode QNNAttention::onEncode(const std::vector<Tensor *> &inputs, const std:
             #endif
             tempK = *(mTempTensorWrappers[9]->getNativeTensor());
         }
-        bool transpose0 = true;
-        bool transpose1 = false;
+        bool transpose0 = false;
+        bool transpose1 = true;
         this->createParamScalar("transpose_in0", transpose0); // mParamScalarWrappers[scalarBaseIndex + 0], transpose_in0
         this->createParamScalar("transpose_in1", transpose1); // mParamScalarWrappers[scalarBaseIndex + 1], transpose_in1
 
@@ -345,7 +345,7 @@ ErrorCode QNNAttention::onEncode(const std::vector<Tensor *> &inputs, const std:
             tempV = *(mTempTensorWrappers[10]->getNativeTensor());
         }
         bool transpose0 = false;
-        bool transpose1 = true;
+        bool transpose1 = false;
         this->createParamScalar("transpose_in0", transpose0); // mParamScalarWrappers[scalarBaseIndex + 2], transpose_in0
         this->createParamScalar("transpose_in1", transpose1); // mParamScalarWrappers[scalarBaseIndex + 3], transpose_in1
 
