@@ -1,0 +1,179 @@
+source/backend/hexagon/execution/HexagonLayerNorm.hpp
+  s_27b180a962f054::t_59ea3bb3033ebd 1-57
+source/backend/hexagon/htp-ops-lib/src/dsp/execute_command.cc
+  s_27b180a962f054::t_59a698d64e6a01 2-785
+  s_27b180a962f054::t_00222b85763507 1
+  s_27b180a962f054::t_61980d45d33e15 786-788
+source/backend/hexagon/htp-ops-lib/src/dsp/eltwise_ops.cc
+  s_27b180a962f054::t_ab103be26d75e5 1-2916
+source/backend/hexagon/htp-ops-lib/src/dsp/ops/matmul_q4fp16_mle32.c
+  s_27b180a962f054::t_0e46f08b8ce450 1-705
+source/backend/hexagon/execution/HexagonSharedGather.cpp
+  s_27b180a962f054::t_49585cca619811 1-79
+source/backend/hexagon/execution/HexagonTMac.cpp
+  s_27b180a962f054::t_b5024a224f9c54 252-256
+  s_27b180a962f054::t_c89e2dd58b5cbc 12-14
+  s_27b180a962f054::t_175305ef7cba4b 22,45,242-244,257
+  s_27b180a962f054::t_5fe0b40aa5873e 54-56
+  s_27b180a962f054::t_b17201e86f5d9a 258-259
+  s_27b180a962f054::t_9d914f1f7b8dce 38-41
+  s_27b180a962f054::t_ed2fe0f30b547a 23-25
+  s_27b180a962f054::t_ab457ac49c5b38 16-18
+  s_27b180a962f054::t_808fee952e9f04 27-36
+  s_27b180a962f054::t_f89c96397de8ce 46-53
+  s_27b180a962f054::t_fdc98dbd31b949 15,19-20,26,37,42-44,57-241,248,251
+  s_27b180a962f054::t_e84795f9b81840 21
+  s_27b180a962f054::t_53dfd3522acaaa 249-250
+  s_27b180a962f054::t_45fa1aa7cda651 245-247
+  s_27b180a962f054::t_d50c01c4b66690 9-11
+source/backend/hexagon/execution/HexagonKVCacheManager.hpp
+  s_27b180a962f054::t_0f0753cbc68a93 1-41
+source/backend/hexagon/execution/HexagonAttention.cpp
+  s_27b180a962f054::t_a90490f0e837c4 1-449
+source/backend/hexagon/backend/HexagonCommand.hpp
+  s_27b180a962f054::t_bc92383b9c45a9 1-64
+source/backend/hexagon/htp-ops-lib/CMakeLists.txt
+  s_27b180a962f054::t_f4af50c51f04bb 1-114
+source/backend/hexagon/htp-ops-lib/src/dsp/loop_ops.cc
+  s_27b180a962f054::t_e6922dcb1ea913 1-1108
+source/backend/hexagon/execution/HexagonRoPE.hpp
+  s_27b180a962f054::t_d8e658441a7fb6 1-35
+source/backend/hexagon/execution/HexagonConvolution.cpp
+  s_27b180a962f054::t_b336c15a10def4 1-845
+source/backend/hexagon/execution/HexagonLoop.cpp
+  s_27b180a962f054::t_568bc77ffd7c8e 1-474
+source/backend/hexagon/backend/HexagonCommand.cpp
+  s_27b180a962f054::t_9fd8bee9f6b126 1-267
+source/backend/hexagon/backend/HexagonBackend.cpp
+  s_27b180a962f054::t_e159b8218055a3 47-50
+  s_27b180a962f054::t_2d963ed550dc29 60
+  s_27b180a962f054::t_510404c9e3ff98 96-97
+  s_27b180a962f054::t_0c57c971e319dc 28-38
+  s_27b180a962f054::t_4033605d499b7e 62-71
+  s_27b180a962f054::t_8a9a54d1ceb024 40
+  s_27b180a962f054::t_eb983476ed5f81 42-45
+  s_27b180a962f054::t_4058acf67e8f3d 101-104
+  s_27b180a962f054::t_6f2410fa1440ed 18,27,39,41,46,51,59,61,72-74,76,87,92,95,98,100,105,114-1026
+  s_27b180a962f054::t_006894d8089aad 19-26
+  s_27b180a962f054::t_f03585e9c1f426 106-110
+  s_27b180a962f054::t_659ae75d33fc05 15-17
+  s_27b180a962f054::t_c9d537ef077ff4 52-58
+  s_27b180a962f054::t_24740cc2031cc8 88-91
+  s_27b180a962f054::t_e044ef17f257c1 75
+  s_27b180a962f054::t_9421d38077d712 111-113
+  s_27b180a962f054::t_31bf8f399e5bca 99
+  s_27b180a962f054::t_e9b3b6c9f094ce 77-86
+  s_27b180a962f054::t_754bb3c4a45e7d 93-94
+  s_27b180a962f054::t_e29adb92e4fc69 12-14
+source/backend/hexagon/execution/HexagonRoPE.cpp
+  s_27b180a962f054::t_802a3eab94b214 253-265
+  s_27b180a962f054::t_3cfb9bd718882c 7-9
+  s_27b180a962f054::t_dc796b5afdd6ab 252
+  s_27b180a962f054::t_14fc9aae37f181 13,16,20,23,25,27-251
+  s_27b180a962f054::t_cab8662db9864b 21-22
+  s_27b180a962f054::t_99544c925795b4 17-19
+  s_27b180a962f054::t_0e72a7afb00d8d 1-6
+  s_27b180a962f054::t_160a17ea14d34f 14-15
+  s_27b180a962f054::t_877938d809733f 26
+  s_27b180a962f054::t_487e35610bad6e 10-12
+  s_27b180a962f054::t_8d018aa132aa17 24
+source/backend/hexagon/execution/HexagonBinary.cpp
+  s_27b180a962f054::t_ea5778ca53727e 1-252
+source/backend/hexagon/backend/HexagonRuntime.cpp
+  s_27b180a962f054::t_93c82c4e941a39 1-1149
+source/backend/hexagon/backend/dsp_op_name.h
+  s_27b180a962f054::t_a3d4258991685b 1-2
+  s_27b180a962f054::t_0c1f814b98f59c 3-5
+  s_27b180a962f054::t_c179f9f9273fda 122-124
+  s_27b180a962f054::t_95ede908b94e63 6-121
+source/backend/hexagon/backend/HexagonRuntime.hpp
+  s_27b180a962f054::t_1220540bf76afc 1-117
+source/backend/hexagon/htp-ops-lib/.clang-format
+  s_27b180a962f054::t_4f7a0a1235a954 1-160
+source/backend/hexagon/htp-ops-lib/src/dsp/matmul_ops.cc
+  s_27b180a962f054::t_13faceaecfa1d4 1-41
+source/backend/hexagon/execution/HexagonRaster.hpp
+  s_27b180a962f054::t_1e102705af99d6 1-52
+source/backend/hexagon/htp-ops-lib/src/dsp/unary_ops.cc
+  s_27b180a962f054::t_fb040bf681724a 551-552
+  s_27b180a962f054::t_95db39d3d3c7be 554-555
+  s_27b180a962f054::t_cfd70a284f4e39 1-2
+  s_27b180a962f054::t_ebb49498b0b7cf 3-550,553
+transformers/llm/engine/src/llm.cpp
+  s_27b180a962f054::t_b906698bf70847 1520
+source/backend/hexagon/htp-ops-lib/.gitignore
+  s_27b180a962f054::t_bb8845cabd1267 1-3
+source/backend/hexagon/execution/HexagonUnary.cpp
+  s_27b180a962f054::t_16348bad7cbf90 16-17
+  s_27b180a962f054::t_34ab7c18f66096 34-35
+  s_27b180a962f054::t_26dc4fd2d8dd44 37-38
+  s_27b180a962f054::t_b7742bd6a555c6 22-23
+  s_27b180a962f054::t_95c585237527ce 28-29
+  s_27b180a962f054::t_e17fa2ca8c3976 143-145,156
+  s_27b180a962f054::t_72374222a424e5 151-152
+  s_27b180a962f054::t_016e2e2ebc708f 154-155
+  s_27b180a962f054::t_360395f567f604 40-41
+  s_27b180a962f054::t_87d68aac4d98b4 25-26
+  s_27b180a962f054::t_2e14c89071cc8f 12-14
+  s_27b180a962f054::t_63ec251b648291 15,18,21,24,27,30,33,36,39,42,45,48-142,150,153
+  s_27b180a962f054::t_27edd34351e27c 31-32
+  s_27b180a962f054::t_db6f443d2f22b5 19-20
+  s_27b180a962f054::t_3f34e4f090320a 46-47
+  s_27b180a962f054::t_c5cd55bca1111c 146-149
+  s_27b180a962f054::t_afa8edbb95eaef 43-44
+  s_27b180a962f054::t_00cadaaa198642 157-158
+  s_27b180a962f054::t_ae76b31a468d88 9-11
+  s_27b180a962f054::t_536ed422ea6328 6-8
+source/backend/hexagon/execution/HexagonLayerNorm.cpp
+  s_27b180a962f054::t_ba5d79319e30bb 1-186
+source/backend/hexagon/htp-ops-lib/src/dsp/ops/matmul_q4block_fp16_mle32.c
+  s_27b180a962f054::t_4ffb395f57d01b 1-661
+source/backend/hexagon/execution/HexagonScale.cpp
+  s_27b180a962f054::t_7274001c1a3f71 1-91
+source/backend/hexagon/htp-ops-lib/src/host/session.c
+  s_27b180a962f054::t_96d74f3a8e071d 3-5
+  s_27b180a962f054::t_facc302a5cc905 6,8-251
+  s_27b180a962f054::t_f3735aa01b8c52 1-2
+  s_27b180a962f054::t_2bf48b5cf37d88 252
+  s_27b180a962f054::t_0614861c4a929c 7
+source/backend/hexagon/htp-ops-lib/src/dsp/rope_ops.cc
+  s_27b180a962f054::t_afe92bd2403d5d 1594-1595
+  s_27b180a962f054::t_085f96523d417f 1582
+  s_27b180a962f054::t_67c35fd6a4727d 1584
+  s_27b180a962f054::t_f079d77c141d7e 1570
+  s_27b180a962f054::t_a397eb143afcfb 1-19
+  s_27b180a962f054::t_26beab7e28fac4 1572
+  s_27b180a962f054::t_bf241b42f97592 30-32
+  s_27b180a962f054::t_34f2cdada984ab 1591
+  s_27b180a962f054::t_6675b8545dba17 1565-1567
+  s_27b180a962f054::t_f5c0f7f1066616 26
+  s_27b180a962f054::t_a5c89820f5aeff 20-22
+  s_27b180a962f054::t_43b1ce7f4081c0 1568
+  s_27b180a962f054::t_ede02d4f9b4584 1577-1578
+  s_27b180a962f054::t_aa91475db53922 1580
+  s_27b180a962f054::t_d9c01670fc554f 23-25,27-29,33-1564,1569,1571,1573-1576,1579,1581,1583,1585-1590,1592-1593
+source/backend/hexagon/execution/HexagonRaster.cpp
+  s_27b180a962f054::t_c90f21cf6a1556 1-461
+source/backend/hexagon/htp-ops-lib/run_sim_so.sh
+  s_27b180a962f054::t_161fe528187253 1-61
+source/backend/hexagon/htp-ops-lib/src/dsp/ops/matmul_q4fp16.c
+  s_27b180a962f054::t_3716f6781c3b06 1-1188
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "0cc9b1ac8b70598e6884b601628be054de383809",
+  "prompts": {},
+  "sessions": {
+    "s_27b180a962f054": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f6919-6538-7151-8ec8-a9296b855108",
+        "model": "unknown"
+      },
+      "human_author": "jxt1234 <jxt1234@zju.edu.cn>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
