@@ -1,0 +1,21 @@
+transformers/llm/engine/src/llm.cpp
+  s_27b180a962f054::t_b906698bf70847 1520
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "f9305daffd82ea00c379b96600fc210cf0a8a9dc",
+  "prompts": {},
+  "sessions": {
+    "s_27b180a962f054": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f6919-6538-7151-8ec8-a9296b855108",
+        "model": "unknown"
+      },
+      "human_author": "jxt1234 <jxt1234@zju.edu.cn>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
